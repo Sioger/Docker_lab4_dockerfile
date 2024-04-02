@@ -27,7 +27,7 @@ cd C:\location\of\downloaded\files\
 
 If changing Apache welcome page content, edit index.html file.
 
-If changing current port Apache working on, edit apache_000-default_config_8080.txt and apache_ports_config_8080.txt files. For now port 8080 is set instead of 80. If setting up different port, change port 8080 to desired port. Remember to change it only in places where port 8080 is set. Other ports are for ssl, etc.
+If changing current port Apache working on, edit apache_000-default_config_8080.txt and apache_ports_config_8080.txt files. For now port 8080 is set instead of 80. If setting up different port, change port 8080 to desired port.
 
 Then run command to build new image with Dockerfile named web100:
 
@@ -45,7 +45,7 @@ docker run -d -p 8080:8080 --name web100container web100
 
 After that, it is possible to access the Apache server working on the running container through port 8080 in this case. Just type localhost:8080 in the browser search bar.
 
-![Working Apache Server on Host Computer](screenshots/server_working.jpg)
+![Working Apache Server on Host Computer](Screnshotts/server_working.png)
 
 If stopping a running container:
 
