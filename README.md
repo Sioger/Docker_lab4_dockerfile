@@ -45,7 +45,7 @@ docker run -d -p 8080:8080 --name web100container web100
 
 After that, it is possible to access the Apache server working on the running container through port 8080 in this case. Just type localhost:8080 in the browser search bar.
 
-![Working Apache Server on Host Computer](Screnshotts/server_working.png)
+![Working Apache Server on Host Computer](Screnshotts/docker_working_site.png)
 
 If stopping a running container:
 
@@ -61,17 +61,7 @@ docker start web100container
 
 ## Image Layers
 
-To specify how many layers image has, execute the command:
-
-```cmd
-docker inspect web100
-```
-
-and look for node RootFS where layers are listed like this:
-
-![Part of Docker Inspect Command Result](screenshots/docker_inspect.jpg)
-
-In this case, there are 5 layers. To specify what actions are responsible for creation of certain layers, execute another command:
+To specify what actions are responsible for creation of certain layers, execute another command:
 
 ```cmd
 docker history web100
@@ -81,6 +71,6 @@ and look for lines where size in SIZE column is larger than 0B because only laye
 
 Result of previous command:
 
-![Docker History Command Result](screenshots/docker_history.jpg)
+![Docker History Command Result](Screnshotts/docker_history.png)
 
 Looking at layers with a size larger than 0B, examine the CREATED BY column. There is information about what commands are responsible for certain layers.
