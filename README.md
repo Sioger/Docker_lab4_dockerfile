@@ -60,8 +60,17 @@ docker start web100container
 ```
 
 ## Image Layers
+To specify how many layers image has, execute the command:
 
-To specify what actions are responsible for creation of certain layers, execute another command:
+```cmd
+docker inspect web100
+```
+
+and look for node RootFS where layers are listed like this:
+
+![Docker History Command Result](Screnshotts/docker_inspect.png)
+
+Here we see there are 5 layers. To specify what actions are responsible for creation of certain layers, execute another command:
 
 ```cmd
 docker history web100
